@@ -15,14 +15,15 @@ import gc
 import heapq
 import math
 import multiprocessing
-import os
+import os,sys
 import signal
 import typing
 
+print(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 # pylint: disable=g-bad-import-order
 import numpy as np
 from absl import app as absl_app
-from absl import flags
 import tensorflow as tf
 # pylint: enable=g-bad-import-order
 
