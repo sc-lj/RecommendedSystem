@@ -23,6 +23,7 @@ import tensorflow as tf
 
 from absl import app as absl_app
 from absl import flags
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from official.datasets import movielens
 from official.recommendation import constants as rconst

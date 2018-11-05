@@ -36,15 +36,15 @@ import typing
 
 import numpy as np
 import tensorflow as tf
-
+path=os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(path))
 from absl import app as absl_app
 from absl import flags
-
-from official.datasets import movielens
-from official.recommendation import constants as rconst
-from official.recommendation import stat_utils
-from official.recommendation import popen_helper
-from official.utils.logs import mlperf_helper
+import constants as rconst
+import stat_utils
+import popen_helper
+from utils.logs import mlperf_helper
+from datasets import movielens
 
 
 _log_file = None
