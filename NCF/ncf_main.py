@@ -289,7 +289,7 @@ def run_ncf(_):
   batch_size = distribution_utils.per_device_batch_size(
       int(FLAGS.batch_size), num_gpus)
   eval_batch_size = int(FLAGS.eval_batch_size or FLAGS.batch_size)
-  ncf_dataset = data_preprocessing.instantiate_pipeline(
+  ncf_dataset,_ = data_preprocessing.instantiate_pipeline(
       dataset=FLAGS.dataset, data_dir=FLAGS.data_dir,
       batch_size=batch_size,
       eval_batch_size=eval_batch_size,
