@@ -36,7 +36,7 @@ from absl import flags
 import tensorflow as tf
 # pylint: enable=g-bad-import-order
 
-from official.utils.flags import core as flags_core
+from utils.flags import core as flags_core
 
 
 ML_1M = "ml-1m"

@@ -18,7 +18,6 @@ import multiprocessing
 import os,sys
 import signal
 import typing
-
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 # pylint: disable=g-bad-import-order
 import numpy as np
