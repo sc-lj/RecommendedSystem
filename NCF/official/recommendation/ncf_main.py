@@ -519,6 +519,7 @@ def define_ncf_flags():
 
 
 if __name__ == "__main__":
-  tf.logging.set_verbosity(tf.logging.INFO)
-  define_ncf_flags()
-  absl_app.run(main)
+  # tf.logging.set_verbosity(tf.logging.INFO)
+  # define_ncf_flags()
+  # absl_app.run(main)
+  pass

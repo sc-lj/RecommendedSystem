@@ -480,14 +480,14 @@ def _generation_loop(num_workers,           # type: int
 
 
 def wait_for_path(fpath):
-  start_time = time.time()
-  while not tf.gfile.Exists(fpath):
-    if time.time() - start_time > rconst.TIMEOUT_SECONDS:
-      log_msg("Waited more than {} seconds. Concluding that this "
+    start_time = time.time()
+    while not tf.gfile.Exists(fpath):
+        if time.time() - start_time > rconst.TIMEOUT_SECONDS:
+            log_msg("Waited more than {} seconds. Concluding that this "
               "process is orphaned and exiting gracefully."
               .format(rconst.TIMEOUT_SECONDS))
-      sys.exit()
-    time.sleep(1)
+            sys.exit()
+        time.sleep(1)
 
 def _parse_flagfile(flagfile):
   """Fill flags with flagfile written by the main process."""
@@ -631,5 +631,6 @@ def define_flags():
   flags.mark_flags_as_required(["data_dir", "cache_id"])
 
 if __name__ == "__main__":
-  define_flags()
-  absl_app.run(main)
+  # define_flags()
+  # absl_app.run(main)
+  pass
